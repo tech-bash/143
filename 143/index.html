@@ -52,7 +52,11 @@
         function showMessage(answer) {
             const messageElement = document.getElementById('message');
             if (answer === 'yes') {
-                messageElement.innerHTML = "<div class='hearts'>❤️❤️❤️</div><p>I love you, Khushi! 🥰</p>";
+                let loveMessage = '';
+                for (let i = 0; i < 100; i++) {
+                    loveMessage += 'I love you ❤️<br>';
+                }
+                messageElement.innerHTML = "<div class='hearts'>❤️❤️❤️</div><p>" + loveMessage + "</p>";
             } else if (answer === 'no') {
                 messageElement.innerHTML = "<p>Goodbye 😔</p>";
                 messageElement.style.color = "gray";
